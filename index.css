@@ -1,0 +1,235 @@
+@font-face {
+    font-family: 'Share Tech Mono';
+    src: url('ShareTechMono-Regular.ttf')
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background: #0f3854;
+    background: radial-gradient(ellipse at center,  #0a2e38  0%, #000000 70%);
+    background-size: 100%;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+#clockContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+}
+
+
+.clock {
+    font-family: 'Share Tech Mono', monospace;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    /* position: absolute;
+    left: 50%;
+    /* top: 50%; */
+    /* transform: translate(-50%, -50%); */
+    color: #daf6ff;
+    text-shadow: 0 0 20px rgba(10, 175, 230, 1),  0 0 20px rgba(10, 175, 230, 0);
+}
+    .time {
+        letter-spacing: 0.05em;
+        font-size: 80px;
+        padding: 5px 0;
+    }
+
+    .date {
+        position: relative;
+        letter-spacing: 0.1em;
+        font-size: 24px;
+    }
+    .text {
+        letter-spacing: 0.1em;
+        font-size: 24px;
+        padding: 10px 0 0;
+    }
+
+    .killclock {
+      position: absolute;
+      /* right: 0px; */
+      border: none;
+      fill: slategray;
+      background-color: transparent;
+      opacity: 0.2;
+      transition: 0.3s;
+    }
+    
+    .killclock:hover {
+      opacity: 1;
+    }
+
+/* Model */
+.modal-mask {
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: table;
+    transition: opacity 0.3s ease;
+  }
+  
+  .modal-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  .modal-container {
+    width: 300px;
+    margin: 0px auto;
+    padding: 20px 30px;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+    transition: all 0.3s ease;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  
+  .modal-header h3 {
+    margin-top: 0;
+    color: #42b983;
+  }
+  
+  .modal-body {
+    margin: 20px 0;
+  }
+  
+  .modal-footer {
+    width: 300px;
+    height: 32px;
+    position: relative;
+    /* background-color: teal; */
+  }
+
+  .modal-default-button {
+    position: absolute;
+    right: 0px;
+  }
+  
+  /*
+   * The following styles are auto-applied to elements with
+   * transition="modal" when their visibility is toggled
+   * by Vue.js.
+   *
+   * You can easily play with the modal transition by editing
+   * these styles.
+   */
+  
+  .modal-enter {
+    opacity: 0;
+  }
+  
+  .modal-leave-active {
+    opacity: 0;
+  }
+  
+  .modal-enter .modal-container,
+  .modal-leave-active .modal-container {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+.settings_button {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  border: none;
+  background-color: transparent;
+  opacity: 0.3;
+  transition: 0.3s;
+}
+
+.settings_button:hover {
+  opacity: 1;
+}
+
+.settingName {
+  width: 197px;
+  padding: 3px;
+  margin-bottom: 5px;
+  /* border: none; */
+  border: 1px solid;
+  border-radius: 3px;
+}
+
+#slidebar {
+  margin-top: 50px;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  position: absolute;
+  /* left: 10%;
+  width: 80%; Full-width */
+  left: 10%;
+  width: 80%;
+  bottom: 38px;
+  height: 25px; /* Specified height */
+  background: #333; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.3; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .3s; /* 0.2 seconds transition on hover */
+  transition: opacity .3s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 0.8; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 15px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: teal;
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 15px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: teal;
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slidervalue {
+  color: teal;
+  text-align: center;
+}
+
+.settingclock {
+  width: 210px;
+  padding: 3px;
+  margin-bottom: 5px;
+  /* border: none; */
+  border: 1px solid;
+  border-radius: 3px;
+}
+
+.clockbuttons {
+  width: 36px;
+  height: 23px;
+}
+
+.settingsbody {
+  font-size: 12px;
+  margin-bottom: 12px;
+}
